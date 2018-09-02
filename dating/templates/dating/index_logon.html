@@ -1,0 +1,13 @@
+{% extends 'dating/index_new.html' %}
+
+{% block button %}
+<a class="item" href="{% url 'logout'%}"><button class="ui massive green basic button">Logout</button></a>
+<a class="item" href="{% url 'match'%}"><button class="ui massive yellow basic button">Match</button></a>
+<a class="item" href="{% url 'hooray'%}">
+  <button class="ui massive yellow basic button" style="width: 90px;"><i class="heart icon"></i></button>
+</a>
+<a class="item" href="{% url 'please'%}">
+  <button class="ui massive yellow basic button" style="width: 90px;"><i class="alarm icon"></i></button>
+</a>
+
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'dating/index.html' %}
+
+{% block style %}
+.arrow {
+  margin-top: 100px;
+}
+
+.arrowCenter {
+  margin-top: +200px;
+}
+
+.cardHeight {
+  height: 500px;
+}
+
+{% endblock style %}
+
+{% block content %}
+<form method="post", target="_self", action="/please/">
+  {% csrf_token %}
+  <div class="ui grid">
+
+    <input type=hidden name = "other_user_id" value = "{{user.user_id}}"/>
+    <div class="right aligned two wide column arrowCenter">
+    </div>
+
+    <div class="center aligned twelve wide column">
+      <div class="ui one cards">
+        <div class="card cardHeight">
+          <div class="content top">
+            <div class="header"><h2>{{user.user_name}}</h2></div>
+            <div class="description">
+              {{user.user_description}}
+            </div>
+          </div>
+
+          {% for q in gachi %}
+          <div class="left aligned content">
+            <div class="header">
+              <i class="talk icon"></i>
+              {{q.0}}
+            </div>
+            <div class="description">
+              {{q.1}}
+            </div>
+          </div>
+          {% endfor %}
+
+          <div class="extra content">
+            <div class="right floated">
+              나와의 매칭도 <i class="star icon"></i> {{score}}
+            </div>
+          </div>
+
+          <div class="ui bottom attached buttons">
+            <button class="ui button" type="submit" name="next" value="1" style="width: 324px; height: 40px;">싫어요</button>
+            <div class="or"></div>
+            <button class="ui yellow button" type="submit" name="pick" value="1" style="float: right; width: 324px; height: 40px;">좋아요
+              <i class="lemon icon"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="left aligned two wide column arrowCenter">
+      <button class=" massive ui icon button arrow" >
+        <i class="chevron right icon"></i>
+      </button>
+    </div>
+
+  </div>
+</form>
+{% endblock content %}

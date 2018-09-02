@@ -1,0 +1,73 @@
+{% extends 'dating/index.html' %}
+
+{% block style %}
+.arrow {
+  margin-top: 100px;
+}
+
+.arrowCenter {
+  margin-top: +200px;
+}
+
+.cardHeight {
+  height: 500px;
+}
+
+{% endblock style %}
+
+{% block content %}
+  <div class="ui grid">
+
+    <div class="right aligned two wide column arrowCenter">
+    </div>
+
+    <div class="center aligned twelve wide column">
+      <div class="ui one cards">
+        <div class="card cardHeight">
+
+          <div class="content top">
+            <div class="header"><h2>{{my_user.user_name}}</h2></div>
+            <div class="description">
+              {{my_user.user_description}}
+            </div>
+          </div>
+
+          <div class="ui divider"></div>
+
+          <div class="left aligned content">
+            <div class="header">
+              <i class="call icon"></i>
+              Phone
+            </div>
+            <div class="description">
+              {{my_user.user_phone_no}}
+            </div>
+          </div>
+
+          <div class="left aligned content">
+            <div class="header">
+              <i class="user icon"></i> Gender {{my_gender}} <br/><br/>
+              <i class="heartbeat icon"></i> Meet someone {{ur_gender}}
+            </div>
+          </div>
+
+          <div class="ui divider"></div>
+
+          {% for q in gachi %}
+          <div class="left aligned content">
+            <div class="header">
+              <i class="talk icon"></i>
+              {{q.0}}
+            </div>
+            <div class="description">
+              {{q.1}}
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock content %}
