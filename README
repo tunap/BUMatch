@@ -1,0 +1,14 @@
+Lemon Melon
+
+Web application based on Django (1.8.0) Framework
+
+Value-based blind date service that connects users who have most similar tastes and values.
+Virtual environment
+
+$ cd lemon-melon
+$ source myvenv/bin/activate
+
+Database Migration and Start Server
+
+$ python3 manage.py migrate
+$ python3 manage.py runserver
