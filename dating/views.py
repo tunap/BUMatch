@@ -135,11 +135,11 @@ def login(request):
     if not request.session.get('member_id',False):
         return render(request, 'dating/login.html', {})
     else:
-        return render(request, 'dating/error.html',{'error_message':"You've already logined!"})
+        return render(request, 'dating/error.html',{'error_message':"You've already logged in!"})
 
 def logout(request):
     if not request.session.get('member_id',False): # not login
-        return render(request, 'dating/error.html',{'error_message':"You are not logined yet!"})
+        return render(request, 'dating/error.html',{'error_message':"You are not logged in yet!"})
     else:
         del request.session['member_id']
         return redirect('index')
@@ -148,12 +148,12 @@ def login_sent(request):
     try:
         m = User.objects.get(user_login_id=request.GET['email'])
     except User.DoesNotExist:
-        return render(request, 'dating/error.html',{'error_message':"You do not have an ID????????"})
+        return render(request, 'dating/error.html',{'error_message':"You are not registered!"})
     if m.user_login_pw == request.GET['password']:
         request.session['member_id']=m.user_id
         return redirect('index')
     else:
-        return render(request, 'dating/error.html',{'error_message':"Wrong password"})
+        return render(request, 'dating/error.html',{'error_message':"Wrong password!"})
 
 def join(request):
 
@@ -275,7 +275,7 @@ def hooray(request):
     disab_right=""
     print(seq_num,len(matched))
     if seq_num>=len(matched):
-        return render(request, 'dating/error_match.html',{'error_message':"없는데 오또카지?", 'my_user':my_user})
+        return render(request, 'dating/error_match.html',{'error_message':"Match not found?", 'my_user':my_user})
     if seq_num==len(matched)-1:
         disab_right="disabled"
     if seq_num<=0:
