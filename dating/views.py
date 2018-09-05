@@ -4,8 +4,113 @@ from .forms import UserForm
 from .models import *
 import math
 
-gachi_query = [["0","What would you do if you were supernatural"], ["1","What would you do if the person you met at Lemon Melon was the ex-girlfriend of a close friend?"], ["2","What would you do if you won the lottery?"]]
-favor_query = [["0","Lemon", "Melon"],["1","소주", "맥주"],["2","켄즈", "핀토스"],["3","치킨", "피자"],["4","Extrovert", "Introvert"],["5","Football", "Baseball"],["6","Yolk", "White"],["7","트와이스", "레드벨벳"],["8","칙촉", "홈런볼"],["9","버거킹", "맘스터치"],["10","ACK", "SYNACK"],["11","태진아", "엑소"],["12","노래방가서 스마트폰 만지기", "노래방에서 노래부르기"],["13","그랑", "책다방"],["14","롯데리아", "서브웨이"],["15","ㅇㅅㅇ", "ㅇㅂㅇ"],["16","왕비성", "닭칼"],["17","오라우", "두메"],["18","폰노이만", "아인슈타인"],["19","서울 되기", "소울 되기"]]
+gachi_query = [
+              ["0","Your Bucket List"],
+              ["1","Best Advice you've ever got ?"],
+              ["2","Favourite song"]
+              ]
+favor_query = [
+              [
+                "0",
+                "Introvert",
+                "Extrovert"
+              ],
+              [
+                "1",
+                "DC",
+                "Marvel"
+              ],
+              [
+                "2",
+                "PJs",
+                "Suit & Tie"
+              ],
+              [
+                "3",
+                "Insta",
+                "Snapchat"
+              ],
+              [
+                "4",
+                "Money",
+                "Love"
+              ],
+              [
+                "5",
+                "Pancakes",
+                "Waffles"
+              ],
+              [
+                "6",
+                "Ross and Rachel were on a break",
+                "Ross and Rachel were not on a break"
+              ],
+              [
+                "7",
+                "Rains",
+                "Nope"
+              ],
+              [
+                "8",
+                "Football",
+                "Cricket"
+              ],
+              [
+                "9",
+                "Sock sock shoe shoe",
+                "Sock shoe sock shoe"
+              ],
+              [
+                "10",
+                "Beach",
+                "Hills"
+              ],
+              [
+                "11",
+                "Books",
+                "Movies"
+              ],
+              [
+                "12",
+                "Tattoos",
+                "Nope"
+              ],
+              [
+                "13",
+                "Coffee",
+                "Tea"
+              ],
+              [
+                "14",
+                "Ghosts exist",
+                "Ghosts is a concept for pussies"
+              ],
+              [
+                "15",
+                "Truth",
+                "Dare"
+              ],
+              [
+                "16",
+                "Poems",
+                "Paintings"
+              ],
+              [
+                "17",
+                "Morning Person",
+                "Night Owl"
+              ],
+              [
+                "18",
+                "I support LGBTQ",
+                "I don't support LGBTQ"
+              ],
+              [
+                "19",
+                "Social Service",
+                "Unicorn Startup"
+              ]
+]
 
 # Create your views here.
 
