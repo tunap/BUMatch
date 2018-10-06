@@ -1,11 +1,12 @@
-Lemon Melon
+Perfect Strangers
 
 Web application based on Django (1.8.0) Framework
 
 Value-based blind date service that connects users who have most similar tastes and values.
+
 Virtual environment
 
-$ cd lemon-melon
+$ cd perfect-strangers
 $ source myvenv/bin/activate
 
 Database Migration and Start Server
